@@ -4,7 +4,7 @@
 
 ### Context
 
-As part of improving the development and testing workflow, I worked on an automated bug reporting flow for **developer mode**.
+As part of improving the development and testing workflow, I worked on an automated bug reporting flow for developer mode.
 
 The functionality was intended for internal development and QA use and was not available to regular application users.
 
@@ -14,22 +14,20 @@ The goal was to reduce the manual effort required to collect screenshots and tec
 
 The main objective was to create a simple internal tool that allowed developers and QA to report an issue directly from the application while automatically including relevant diagnostic information.
 
-Because the functionality was restricted to developer mode, the reporting flow was designed specifically for internal development and testing workflows rather than end users.
-
 The workflow was designed to:
 
 * Capture the current application state
 * Take a screenshot when an issue was reported
 * Include relevant information from the App Health Dashboard
 * Allow the user to add additional context when needed
-* Combine the information into a single report
+* Combine the information into a structured report
 * Send the report directly to the team's Microsoft Teams channel
 
 ---
 
 ## User Flow
 
-The reporting flow was designed to be simple and require only a few actions:
+The reporting flow was designed to require only a few actions:
 
 **Shake Screen → Screenshot → Preview → Add Details (Optional) → Send → Teams**
 
@@ -50,11 +48,11 @@ The functionality was available only in developer mode, so the flow was intended
 
 ## Requirements Analysis
 
-I analyzed what information would be useful when reporting a bug and how the information could be collected automatically.
+I analyzed the existing bug reporting workflow and identified which information could be collected automatically to reduce manual effort.
 
 The reporting flow needed to:
 
-* Detect the user's reporting action
+* Detect the reporting action
 * Capture a screenshot
 * Collect relevant application and diagnostic information
 * Present the captured information for review
@@ -62,7 +60,7 @@ The reporting flow needed to:
 * Combine the information into a structured report
 * Send the report to the team's communication channel
 
-The solution was designed to build on the information already available through the App Health Dashboard.
+The solution was designed to reuse information already available through the App Health Dashboard rather than requiring the user to collect it manually.
 
 ---
 
@@ -100,7 +98,7 @@ This created a direct connection between the application and the team's communic
 
 I was responsible for implementing the reporting flow and integrating it with the existing application functionality.
 
-The implementation connected several pieces of functionality:
+The implementation connected:
 
 * User-triggered bug reporting
 * Screenshot capture
@@ -110,7 +108,7 @@ The implementation connected several pieces of functionality:
 * Report generation
 * Teams webhook integration
 
-The solution was designed to reuse information already available within the application rather than requiring the user to enter the information manually.
+The solution reused information already available within the application to minimize manual data entry.
 
 ---
 
